@@ -2,6 +2,9 @@ import Vue from "vue";
 import App from "./App";
 
 import Router, { RouterMount } from "uni-simple-router";
+// import Router, {
+//   RouterMount,
+// } from "./js_sdk/hhyang-uni-simple-router/index.js";
 
 Vue.use(Router);
 
@@ -34,8 +37,7 @@ const router = new Router({
   routerAfterEach: () => {
     console.log("routerAfterEach");
   },
-  routes: [
-    ...ROUTES,
+  routes: ROUTES.concat([
     {
       path: "*",
       redirect: (to) => {
@@ -51,7 +53,7 @@ const router = new Router({
         };
       },
     },
-  ],
+  ]),
 });
 
 console.log(router);
