@@ -24,7 +24,10 @@ const router = new Router({
     vueRouterDev: false,
     useUniConfig: true,
   },
-  APP: {},
+  APP: {
+    holdTabbar: false,
+    rewriteFun: false,
+  },
   routerBeforeEach: () => {
     console.log("routerBeforeEach");
   },
